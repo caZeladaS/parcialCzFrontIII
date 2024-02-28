@@ -1,4 +1,3 @@
-// src/components/Pokemon.js
 import React from 'react';
 
 const Pokemon = ({ favoritePokemon, element }) => {
