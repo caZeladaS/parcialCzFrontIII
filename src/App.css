@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-color: yellow; /* Fondo amarillo para todo el cuerpo */
+}
+
+.card-container {
+  background-color: orange;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.error-message {
+  color: red;
+}

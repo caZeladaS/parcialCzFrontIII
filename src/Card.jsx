@@ -1,6 +1,6 @@
-// src/components/Card.js
 import React, { useState } from 'react';
 import Pokemon from './Components/pokemon';
+import './App.css';
 
 const Card = () => {
   const [pokemon, setPokemon] = useState('');
@@ -14,7 +14,7 @@ const Card = () => {
     // Verifica que los datos sean válidos
     if (pokemon.length > 3 && element.length > 3) {
       // Almacena las respuestas
-      const submittedData = { pokemon, element };
+      const submittedData = {pokemon, element};
       setPokemon('');
       setElement('');
       setSubmittedData(submittedData);
@@ -26,7 +26,7 @@ const Card = () => {
   };
 
   return (
-    <div>
+    <div className="card-container">
       <h2>Elige tu Pokémon favorito</h2>
       <form onSubmit={handleSubmit}>
         <label>
@@ -50,7 +50,7 @@ const Card = () => {
         <button type="submit">Enviar</button>
       </form>
 
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       {submittedData && <Pokemon favoritePokemon={submittedData.pokemon} element={submittedData.element} />}
     </div>
